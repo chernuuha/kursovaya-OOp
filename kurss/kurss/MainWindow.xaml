@@ -1,0 +1,57 @@
+﻿<Window x:Class="kurs.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kurs"
+        mc:Ignorable="d"
+        Title="MainPage" Height="513.2" Width="880.8" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="291*"/>
+            <ColumnDefinition Width="590*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="415*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.RowSpan="2" Background="#2a2b2e" Grid.Column="1" HorizontalAlignment="Center" Width="599">
+            
+        </Grid>
+        
+        <Grid Grid.RowSpan="2" Background="#4f5052" HorizontalAlignment="Center" Width="290"/>
+        <ListBox x:Name="InfoBox" FontSize="18" Grid.Column="1" Grid.RowSpan ="2 "  Margin="20,20,20,10"/>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Foreground="White" Height="40" Width="214">Оценка отелей</TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" Margin="0,0,1,0">
+            <Button Cursor="Hand" Name="Luxury"  FontSize="20" Height="50" Foreground="#878787" Click="Luxury_Click">
+                <TextBlock Foreground="#878787"><Run Language="ru-ru" Text=" Добавить роскошный отель"/><Run Text="                "/></TextBlock>
+            </Button>
+            <Button Cursor="Hand" x:Name="Budget"  FontSize="20" Height="50" Foreground="#878787" Click="Budget_Click" >
+                <TextBlock Foreground="#878787"><Run Language="ru-ru" Text=" Добавить бюджетный отель"/><Run Text="                "/></TextBlock>
+            </Button>
+            <Button Cursor="Hand" x:Name="President_Lux"  FontSize="20" Height="50" Foreground="#878787" Click="President_Lux_Click" >
+                <TextBlock Foreground="#878787"><Run Language="ru-ru" Text=" Президентский люкс"/><Run Text="                "/></TextBlock>
+            </Button>
+            <Button Margin="0, 66" Cursor="Hand" x:Name="EditHotel"  FontSize="20" Height="50" Foreground="#878787" Click="EditHotel_Click" >
+                <TextBlock Foreground="#878787"><Run Language="ru-ru" Text="        Редактировать отзыв"/><Run Text="                "/></TextBlock>
+            </Button>
+
+
+        </StackPanel>
+        
+        <Button Cursor="Hand"  Name ="OutBTN" Click="OutBTN_Click_1" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Height="50" Margin="0,366,1,0">
+            <TextBlock Text="Выйти                " Foreground="#878787"/>
+        </Button>
+        <Button Cursor="Hand" x:Name ="OutBTN_Copy" Click="SaveHotels" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Height="50" Margin="0,316,1,0">
+            <TextBlock Foreground="#878787" Height="33"><Run Language="ru-ru" Text="Сохранить отзывы"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        </Button>
+        <Button Cursor="Hand" x:Name ="OutBTN_Copy1" Click="LoadHotels" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Height="50" Margin="0,266,1,0">
+            <TextBlock Foreground="#878787" Height="33"><Run Language="ru-ru" Text="Загрузить отзывы"/><LineBreak/><Run Language="ru-ru"/><Run Text="                "/></TextBlock>
+        </Button>
+        <Button  Cursor="Hand"  x:Name ="RemoveHotel"  Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" FontSize="20" Height="50" Margin="0,166,1,0" Click="RemoveHotel_Click">
+            <TextBlock Text="Удалить               " Foreground="#878787"/>
+        </Button>
+
+    </Grid>
+</Window>
